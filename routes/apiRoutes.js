@@ -4,9 +4,6 @@
 // These data sources hold arrays of information on table-data, waitinglist, etc.
 // ===============================================================================
 
-var friendsData = require("../data/friendsData");
-var matchListData = require("../data/matchListData");
-
 
 // ===============================================================================
 // ROUTING
@@ -21,10 +18,6 @@ module.exports = function(app) {
 
   app.get("/api/friends", function(req, res) {
     res.json(friendsData);
-  });
-
-  app.get("/api/match", function(req, res) {
-    res.json(matchListData);
   });
 
   // API POST Requests
@@ -45,24 +38,4 @@ module.exports = function(app) {
       
   });
 
-  app.post("/api/match", function(req, res) {
-    // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-    // It will do this by sending out the value "true" have a table
-    // req.body is available since we're using the body-parser middleware
-
-      matchListData=[req.body];
-      return res.json(matchListData);
-  });
-
-  // ---------------------------------------------------------------------------
-  // I added this below code so you could clear out the table while working with the functionality.
-  // Don"t worry about it!
-
-  app.post("/api/clear", function(req, res) {
-    // Empty out the arrays of data
-    friendsData.length = [];
-    matchListData.length = [];
-
-    res.json({ ok: true });
-  });
 };

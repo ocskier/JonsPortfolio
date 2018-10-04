@@ -1,136 +1,160 @@
-  <nav role="navigation" style="background: dimgray;box-shadow:none;color:white;">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="https://www.google.com/" class="brand-logo"><img src="assets/images/GNOME_Web_logo.png" width="60px" height="60px"></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="https://bootcampspot-v2.com/" class="white-text" style="padding:10px 0;"><img src="https://s3.amazonaws.com/bcs-media-dev/ui/favicons/favicon-32x32.png"></a></li>
-      </ul>
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="https://bootcampspot-v2.com/">Bootcamp</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
+<nav role="navigation" style="background: dimgray;box-shadow:none;color:white;">
+  <div class="nav-wrapper container">
+    <a id="logo-container" href="https://www.google.com/" class="brand-logo"><img src="assets/images/GNOME_Web_logo.png"
+        width="60px" height="60px"></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="https://bootcampspot-v2.com/" class="white-text" style="padding:10px 0;"><img src="https://s3.amazonaws.com/bcs-media-dev/ui/favicons/favicon-32x32.png"></a></li>
+    </ul>
+    <ul id="nav-mobile" class="sidenav">
+      <li><a href="https://bootcampspot-v2.com/">Bootcamp</a></li>
+    </ul>
+    <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+  </div>
+</nav>
 
-  <div style="background: dimgray;color:white;border-bottom: 6px solid dimgray">
+<div style="background: dimgray;color:white;border-bottom: 6px solid dimgray">
+  <div class="container">
+    <h3 style="text-align: center;font-size: 58px;">Jon Jackson</h3>
+    <h6 style="text-align: center;margin-bottom: 10px;font-size: 22px;">Full Stack Web Development</h6>
+  </div>
+</div>
+
+<div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
     <div class="container">
-        <h3 style="text-align: center;font-size: 58px;">Jon Jackson</h3> 
-        <h6 style="text-align: center;margin-bottom: 10px;font-size: 22px;">Full Stack Web Development</h6> 
-    </div>
-  </div>
-
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h4 class="header center teal-text text-lighten-2"></h4>
-        <div class="row center">
-          <h5 class="header col s12 light"></h5>
-        </div>
-        <div class="row center">
-          
-        </div>
-        <br><br>
+      <br><br>
+      <h4 class="header center teal-text text-lighten-2"></h4>
+      <div class="row center">
+        <h5 class="header col s12 light"></h5>
+      </div>
+      <div class="row center">
 
       </div>
+      <br><br>
+
     </div>
-    <div class="parallax"><img src="assets/images/love-maldives-57700-unsplash.jpg" alt="Unsplashed background img 1"></div>
   </div>
+  <div class="parallax"><img src="assets/images/love-maldives-57700-unsplash.jpg" alt="Unsplashed background img 1"></div>
+</div>
 
 
-  <div class="container">
-    <div class="section" style="padding-top: 2rem;">
+<div class="container">
+  <div class="section" style="padding-top: 2rem;">
 
-      <!--   Icon Section   -->
-      <h6 style="font-size: 28px; text-align: center;font-weight: bold;margin-bottom: 10px;color: white;">Projects</h6>
-      <div id="proj-row" class="row carousel">
-        
+    <!--   Icon Section   -->
+    <h6 style="font-size: 28px; text-align: center;font-weight: bold;margin-bottom: 10px;color: white;">Projects</h6>
+    <div id="proj-row" class="row carousel">
+      {{#each projects}}
+        <a class="carousel-item" href={{Url}} target="blank" style="width:310px;overflow:initial">
+          <img src={{Pic}} alt="Portfolio Pic" style="border-radius: 25px;">
+          <p class="ctr-txt white-text">{{Name}}</p>
+        </a>
+      {{/each}}
+    </div>
+  </div>
+</div>
+
+
+<div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <div class="row center">
+        <h5 class="header col s12 light"></h5>
       </div>
+
     </div>
   </div>
+  <div class="parallax"><img src="assets/images/love-maldives-57700-unsplash.jpg" alt="Unsplashed background img 2"></div>
+</div>
 
+<div class="container">
+  <div class="section">
 
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light"></h5>
-        </div>
-        
-      </div>
-    </div>
-    <div class="parallax"><img src="assets/images/love-maldives-57700-unsplash.jpg" alt="Unsplashed background img 2"></div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-
-      <div class="row">
-        <div class="col s12 center white-text">
-          <h3><i class="mdi-content-send brown-text">
-            <a id="logo-container" href="#" class="brand-logo center"><img src="assets/images/V9H2222Jon.jpg" width="100px" height="100px"></a>
+    <div class="row">
+      <div class="col s12 center white-text">
+        <h3><i class="mdi-content-send brown-text">
+            <a id="logo-container" href="#" class="brand-logo center"><img src="assets/images/V9H2222Jon.jpg" width="100px"
+                height="100px"></a>
           </i></h3>
-          <h4 style="text-decoration-line: underline">About Me</h4>
-          <p class="left-align light" style="font-size: 1.5rem;line-height: 2rem;"><span class="tab"></span>  Hello! I was born in Louisiana and grew up in Richmond, 
-            Va until graduating from high school.  I attended college at <a href ="https://www.ncsu.edu"
-            target="blank" style="color: moccasin;font-style: italic;font-weight: bolder;">NC State University</a> and graduated with dual B.S. degrees in 
-            Chemical Engineering and Wood and Paper Science.  
-          </p>
-          <p class="left-align light" style="font-size: 1.5rem;line-height: 2rem;"><span class="tab"></span>  I attended graduate school where I obtained a Computer 
-            Programming Certificate and a Masters in Wood and Paper Science. 
-            My family life and personal interests have led me to spend the most recent years 
-            teaching myself hardware and software fundamentals utilizing freelance work.  I spent 
-            sometime learning coding as well as building, repairing, and implementing personal 
-            computers.  
-          </p>
-          <p class="left-align light" style="font-size: 1.5rem;line-height: 2rem;"><span class ="tab"></span> I am looking to gain full-time employment in software 
-            development at this juncture using skills learned up to and including the 
-            <a href ="https://codingbootcamp.unc.edu/" target="blank" style="color: moccasin;font-style: italic;font-weight: bolder;">UNC Chapel 
-            Hill Coding Bootcamp</a>.   
-          </p>
+        <h4 style="text-decoration-line: underline">About Me</h4>
+        <p class="left-align light" style="font-size: 1.5rem;line-height: 2rem;"><span class="tab"></span> Hello! I was
+          born in Louisiana and grew up in Richmond,
+          Va until graduating from high school. I attended college at <a href="https://www.ncsu.edu" target="blank"
+            style="color: moccasin;font-style: italic;font-weight: bolder;">NC State University</a> and graduated with
+          dual B.S. degrees in
+          Chemical Engineering and Wood and Paper Science.
+        </p>
+        <p class="left-align light" style="font-size: 1.5rem;line-height: 2rem;"><span class="tab"></span> I attended
+          graduate school where I obtained a Computer
+          Programming Certificate and a Masters in Wood and Paper Science.
+          My family life and personal interests have led me to spend the most recent years
+          teaching myself hardware and software fundamentals utilizing freelance work. I spent
+          sometime learning coding as well as building, repairing, and implementing personal
+          computers.
+        </p>
+        <p class="left-align light" style="font-size: 1.5rem;line-height: 2rem;"><span class="tab"></span> I am looking
+          to gain full-time employment in software
+          development at this juncture using skills learned up to and including the
+          <a href="https://codingbootcamp.unc.edu/" target="blank" style="color: moccasin;font-style: italic;font-weight: bolder;">UNC
+            Chapel
+            Hill Coding Bootcamp</a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<footer class="page-footer" style="background:dimgray;">
+  <div class="container">
+    <div class="row" style="text-align: center;">
+      <div class="col l6 s12">
+        <div class="row center">
+          <div class="col s12 socialbar" style="margin: 0 auto;">
+            <a href="https://www.facebook.com/jon.r.jackson.9" class="fa fa-facebook" target="blank"></a>
+            <a href="https://www.twitter.com" class="fa fa-twitter" target="blank"></a>
+            <a href="http://www.linkedin.com/in/jon-jackson-27230429" class="fa fa-linkedin" target="blank"></a>
+          </div>
         </div>
       </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">GitHub</h5>
+        <ul>
+          <li><a class="white-text" href="https://github.com/ocskier"><img src="assets/images/GitHub-Mark-Light-120px-plus.png"
+                width="30px" height="30px"></a></li>
 
+        </ul>
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text"><a class="white-text" href="../Api-Ajax-Hw/index.html">Connect</a></h5>
+        <ul>
+          <li><a class="white-text" href="/contact">Email</a></li>
+          <li>Phone</li>
+        </ul>
+      </div>
     </div>
   </div>
-
-
-  <footer class="page-footer" style="background:dimgray;">
+  <div class="footer-copyright">
     <div class="container">
-      <div class="row" style="text-align: center;">
-        <div class="col l6 s12">
-          <div class="row center">
-            <div class="col s12 socialbar" style="margin: 0 auto;">
-                <a href="https://www.facebook.com/jon.r.jackson.9" class="fa fa-facebook" target="blank"></a>
-                <a href="https://www.twitter.com" class="fa fa-twitter" target="blank"></a>
-                <a href="http://www.linkedin.com/in/jon-jackson-27230429" class="fa fa-linkedin" target="blank"></a>
-            </div>
-          </div>
-          </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">GitHub</h5>
-          <ul>
-            <li><a class="white-text" href="https://github.com/ocskier"><img src="assets/images/GitHub-Mark-Light-120px-plus.png" width="30px" height="30px"></a></li>
-            
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text"><a class="white-text" href="../Api-Ajax-Hw/index.html">Connect</a></h5>
-          <ul>
-            <li><a class="white-text" href="contact.html">Email</a></li>
-            <li>Phone</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
       Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
 <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/init.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="assets/javascript/app.js"></script>
+
+<script>
+  (function($){
+    $(function(){
+
+      $('.sidenav').sidenav();
+      $('.parallax').parallax();
+      $('.carousel').carousel();
+
+    }); // end of document ready
+  })(jQuery); // end of jQuery name space
+</script>
