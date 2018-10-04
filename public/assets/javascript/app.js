@@ -1,3 +1,19 @@
-var newCardA = $('<a class="carousel-item" href="'+projectsArray[i].Url+'" target="blank" style="width:310px;overflow:initial"></a>');
-        newCardA.append($('<img src="'+projectsArray[i].Pic+'" alt="Portfolio Pic" style="border-radius: 25px;">')).append($('<p class="ctr-txt white-text">'+projectsArray[i].Name+'</p>'));
-        $("#proj-row").append(newCardA);
+$(document).ready(function () {
+    var from, name, textbody;
+    $("button").click(function () {
+        name = $("#contact-name").val();
+        from = $("#contact-email").val();
+        text = $("#contact-text").val();
+        $("#message").text("Sending E-mail...Please wait");
+        
+        $.get( "/send", {
+            name: name,    
+            from: from,
+            textbody: text},function(data){
+                if(data=="sent")
+                {
+                    $("#message").empty().html("Email has been sent to Jon!");
+                }
+            });
+    });
+});

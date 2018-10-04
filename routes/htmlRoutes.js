@@ -5,11 +5,9 @@
 
 var path = require("path");
 
-var quests = require("../data/questions");
-// var match = require("../data/matchListData");
-
 var exphbs = require("express-handlebars");
 
+var projects = require("../data/projects");
 
 // ===============================================================================
 // ROUTING
@@ -24,18 +22,20 @@ module.exports = function(app) {
   app.engine("handlebars", exphbs({ defaultLayout: "main" }));
   app.set("view engine", "handlebars");
 
-  app.get("/friends", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/friends.html"));
+  app.get("/", function(req, res) {
+    
+    res.render("index",{projects});
+
   });
 
-  app.get("/questions", function(req, res) {
+  app.get("/contact", function(req, res) {
 
-    res.render("questions",{quests});
+    res.render("contact",{});
 
   });
 
   // If no matching route is found default to home
   app.get("*", function(req, res) {
-    res.render("index",quests);
+    res.render("index",{projects});
   });
 };
